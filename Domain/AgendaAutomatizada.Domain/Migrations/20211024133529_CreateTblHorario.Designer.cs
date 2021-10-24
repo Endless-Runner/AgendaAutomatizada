@@ -4,14 +4,16 @@ using AgendaAutomatizada.Domain.SQL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AgendaAutomatizada.Domain.Migrations
 {
     [DbContext(typeof(AgendaDbContext))]
-    partial class AgendaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211024133529_CreateTblHorario")]
+    partial class CreateTblHorario
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -50,6 +52,9 @@ namespace AgendaAutomatizada.Domain.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int?>("AgendaId")
+                        .HasColumnType("int");
+
                     b.Property<bool>("Estado")
                         .HasColumnType("bit");
 
@@ -68,13 +73,16 @@ namespace AgendaAutomatizada.Domain.Migrations
                     b.Property<string>("Nombre")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int?>("TandasId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
-                    b.HasIndex("IdAgenda");
+                    b.HasIndex("AgendaId");
 
-                    b.HasIndex("IdTanda");
+                    b.HasIndex("TandasId");
 
-                    b.ToTable("Horarios");
+                    b.ToTable("Horario");
                 });
 
             modelBuilder.Entity("AgendaAutomatizada.Domain.Entities.Tandas", b =>
@@ -147,13 +155,11 @@ namespace AgendaAutomatizada.Domain.Migrations
                 {
                     b.HasOne("AgendaAutomatizada.Domain.Entities.Agenda", "Agenda")
                         .WithMany("Horarios")
-                        .HasForeignKey("IdAgenda")
-                        .IsRequired();
+                        .HasForeignKey("AgendaId");
 
                     b.HasOne("AgendaAutomatizada.Domain.Entities.Tandas", "Tandas")
                         .WithMany("Horarios")
-                        .HasForeignKey("IdTanda")
-                        .IsRequired();
+                        .HasForeignKey("TandasId");
 
                     b.Navigation("Agenda");
 

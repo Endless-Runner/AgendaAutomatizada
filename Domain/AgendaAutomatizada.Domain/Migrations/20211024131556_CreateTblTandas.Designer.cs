@@ -4,14 +4,16 @@ using AgendaAutomatizada.Domain.SQL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AgendaAutomatizada.Domain.Migrations
 {
     [DbContext(typeof(AgendaDbContext))]
-    partial class AgendaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211024131556_CreateTblTandas")]
+    partial class CreateTblTandas
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -41,40 +43,6 @@ namespace AgendaAutomatizada.Domain.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Agendas");
-                });
-
-            modelBuilder.Entity("AgendaAutomatizada.Domain.Entities.Horario", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<bool>("Estado")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime>("FechaCreacion")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("FechaModificacion")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("IdAgenda")
-                        .HasColumnType("int");
-
-                    b.Property<int>("IdTanda")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Nombre")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("IdAgenda");
-
-                    b.HasIndex("IdTanda");
-
-                    b.ToTable("Horarios");
                 });
 
             modelBuilder.Entity("AgendaAutomatizada.Domain.Entities.Tandas", b =>
@@ -141,33 +109,6 @@ namespace AgendaAutomatizada.Domain.Migrations
                         .IsUnique();
 
                     b.ToTable("Usuarios");
-                });
-
-            modelBuilder.Entity("AgendaAutomatizada.Domain.Entities.Horario", b =>
-                {
-                    b.HasOne("AgendaAutomatizada.Domain.Entities.Agenda", "Agenda")
-                        .WithMany("Horarios")
-                        .HasForeignKey("IdAgenda")
-                        .IsRequired();
-
-                    b.HasOne("AgendaAutomatizada.Domain.Entities.Tandas", "Tandas")
-                        .WithMany("Horarios")
-                        .HasForeignKey("IdTanda")
-                        .IsRequired();
-
-                    b.Navigation("Agenda");
-
-                    b.Navigation("Tandas");
-                });
-
-            modelBuilder.Entity("AgendaAutomatizada.Domain.Entities.Agenda", b =>
-                {
-                    b.Navigation("Horarios");
-                });
-
-            modelBuilder.Entity("AgendaAutomatizada.Domain.Entities.Tandas", b =>
-                {
-                    b.Navigation("Horarios");
                 });
 #pragma warning restore 612, 618
         }

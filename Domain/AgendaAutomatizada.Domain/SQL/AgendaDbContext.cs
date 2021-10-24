@@ -19,10 +19,16 @@ namespace AgendaAutomatizada.Domain.SQL
             base.OnModelCreating(builder);
 
             builder.ApplyConfiguration(new UsuarioConfiguration());
+            builder.ApplyConfiguration(new AgendaConfiguration());
+            builder.ApplyConfiguration(new TandasConfiguration());
+            builder.ApplyConfiguration(new HorarioConfiguration());
             //builder.ApplyConfiguration(new NombreDeLaConfiguracion());
 
         }
         public DbSet<Usuario> Usuarios { get; set; }
+        public DbSet<Agenda> Agendas { get; set; }
+        public DbSet<Tandas> Tandas { get; set; }
+        public DbSet<Horario> Horarios { get; set; }
         //public DbSet<NombreDeLaClase> NombreUtilizadoEnElCodigo { get; set; }
     }
 }
