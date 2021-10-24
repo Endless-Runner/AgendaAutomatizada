@@ -37,7 +37,7 @@ namespace AgendaAutomatizada.Forms
         private static void ConfigureServices(ServiceCollection services)
         {
             services.AddDbContext<AgendaDbContext>(options =>
-            options.UseSqlServer("Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = AgendaAutomatizada; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = False; ApplicationIntent = ReadWrite; MultiSubnetFailover = False"));
+            options.UseSqlServer("Data Source=(localdb)\\ProjectsV13;Initial Catalog=AgendaAutomatizada;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"));
             services.AddTransient<IUnitOfWork, UnitOfWork>();
             services.AddScoped<IUnitOfWork, UnitOfWork>()
                 .AddScoped<LoginForm>();

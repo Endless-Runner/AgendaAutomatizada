@@ -43,19 +43,21 @@ namespace AgendaAutomatizada.Forms
             this.tbUser.PlaceholderText = "Apodo/Correo";
             this.tbUser.Size = new System.Drawing.Size(100, 23);
             this.tbUser.TabIndex = 0;
+            this.tbUser.TextChanged += new System.EventHandler(this.tbUser_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(298, 122);
+            this.label1.Location = new System.Drawing.Point(307, 202);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 15);
             this.label1.TabIndex = 1;
             this.label1.Text = "Usuario";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // btAcceder
             // 
-            this.btAcceder.Location = new System.Drawing.Point(381, 215);
+            this.btAcceder.Location = new System.Drawing.Point(390, 299);
             this.btAcceder.Name = "btAcceder";
             this.btAcceder.Size = new System.Drawing.Size(75, 23);
             this.btAcceder.TabIndex = 2;
@@ -66,25 +68,27 @@ namespace AgendaAutomatizada.Forms
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(298, 160);
+            this.label2.Location = new System.Drawing.Point(307, 244);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 15);
             this.label2.TabIndex = 4;
             this.label2.Text = "Contraseña";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // tbContraseña
             // 
-            this.tbContraseña.Location = new System.Drawing.Point(381, 153);
+            this.tbContraseña.Location = new System.Drawing.Point(390, 237);
             this.tbContraseña.Name = "tbContraseña";
             this.tbContraseña.PlaceholderText = "Contraseña";
             this.tbContraseña.Size = new System.Drawing.Size(100, 23);
             this.tbContraseña.TabIndex = 3;
+            this.tbContraseña.TextChanged += new System.EventHandler(this.tbContraseña_TextChanged);
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 360);
+            this.ClientSize = new System.Drawing.Size(834, 561);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbContraseña);
             this.Controls.Add(this.btAcceder);
@@ -92,6 +96,7 @@ namespace AgendaAutomatizada.Forms
             this.Controls.Add(this.tbUser);
             this.Name = "LoginForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
