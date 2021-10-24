@@ -1,5 +1,4 @@
-﻿using AgendaAutomatizada.Forms.Agenda;
-using AgendaAutomatizada.Interfaces;
+﻿using AgendaAutomatizada.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +14,11 @@ namespace AgendaAutomatizada.Forms
     public partial class LoginForm : Form
     {
         private readonly IUnitOfWork _unitOfWork;
+
+        public LoginForm()
+        {
+            InitializeComponent();
+        }
 
         public LoginForm(IUnitOfWork unitOfWork)
         {
@@ -36,9 +40,7 @@ namespace AgendaAutomatizada.Forms
 
             if (success)
             {
-                var index = new IndexForm();
-                index.Show();
-                this.Close();
+
             }
             else
             {
