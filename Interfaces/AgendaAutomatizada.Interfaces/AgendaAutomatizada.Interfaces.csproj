@@ -6,7 +6,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Domain\AgendaAutomatizada.Domain\AgendaAutomatizada.Domain.csproj" />
-    <ProjectReference Include="..\..\Interfaces\AgendaAutomatizada.Interfaces\AgendaAutomatizada.Interfaces.csproj" />
   </ItemGroup>
 
 </Project>

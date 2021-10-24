@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Domain\AgendaAutomatizada.Domain\AgendaAutomatizada.Domain.csproj" />
+    <ProjectReference Include="..\..\..\Helper\AgendaAutomatizada.Helper\AgendaAutomatizada.Helper.csproj" />
+    <ProjectReference Include="..\..\..\Repository\AgendaAutomatizada.Repository\AgendaAutomatizada.Repository.csproj" />
+    <ProjectReference Include="..\..\..\Service\AgendaAutomatizada.Service\AgendaAutomatizada.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.11" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.11">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+
+</Project>

@@ -5,25 +5,31 @@ VisualStudioVersion = 16.0.31729.503
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Domain Layer", "Domain Layer", "{BDEE3FEB-E0C5-4B48-A7AE-E6A9E3B921B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaAutomatizada.Domain", "Domain\AgendaAutomatizada.Domain\AgendaAutomatizada.Domain.csproj", "{B6247477-B64D-4741-8B61-EEF5C6A22E6B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgendaAutomatizada.Domain", "Domain\AgendaAutomatizada.Domain\AgendaAutomatizada.Domain.csproj", "{B6247477-B64D-4741-8B61-EEF5C6A22E6B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repository Layer", "Repository Layer", "{AD954844-E711-48F4-8185-AB2123121710}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaAutomatizada.Repository", "Repository\AgendaAutomatizada.Repository\AgendaAutomatizada.Repository.csproj", "{AD24A301-6644-4645-ABB2-CBC916F054EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgendaAutomatizada.Repository", "Repository\AgendaAutomatizada.Repository\AgendaAutomatizada.Repository.csproj", "{AD24A301-6644-4645-ABB2-CBC916F054EF}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Service Layer", "Service Layer", "{CE3A59DD-C663-4F6F-A0E0-30CE398553DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaAutomatizada.Service", "Service\AgendaAutomatizada.Service\AgendaAutomatizada.Service.csproj", "{FFBD7560-E5C0-40F8-8D1B-B4F7CEACED27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgendaAutomatizada.Service", "Service\AgendaAutomatizada.Service\AgendaAutomatizada.Service.csproj", "{FFBD7560-E5C0-40F8-8D1B-B4F7CEACED27}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Helper Layer", "Helper Layer", "{0E1205C0-F327-4856-9ADB-1F201F8E8FC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaAutomatizada.Helper", "Helper\AgendaAutomatizada.Helper\AgendaAutomatizada.Helper.csproj", "{B8918365-0172-43EB-A67A-70854ED38C6A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgendaAutomatizada.Helper", "Helper\AgendaAutomatizada.Helper\AgendaAutomatizada.Helper.csproj", "{B8918365-0172-43EB-A67A-70854ED38C6A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation Layer", "Presentation Layer", "{BEF62F82-D4E7-4EAF-8E40-44AF493AAC79}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Forms", "Forms", "{D2C5487D-6E14-46BB-B575-64D9BFB1BCAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaAutomatizada.Forms", "Presentation\Forms\AgendaAutomatizada.Forms\AgendaAutomatizada.Forms.csproj", "{6D5C4A7D-2BF2-4B61-804E-A1525E9F2B9E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgendaAutomatizada.Forms", "Presentation\Forms\AgendaAutomatizada.Forms\AgendaAutomatizada.Forms.csproj", "{6D5C4A7D-2BF2-4B61-804E-A1525E9F2B9E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{B4BA701B-F2ED-418E-96FE-E798AF4D8B20}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AgendaAutomatizada.Api", "Presentation\Api\AgendaAutomatizada.Api\AgendaAutomatizada.Api.csproj", "{FBA45E7D-0C82-4791-A014-F7A380FEA871}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgendaAutomatizada.Interfaces", "Interfaces\AgendaAutomatizada.Interfaces\AgendaAutomatizada.Interfaces.csproj", "{B0D2F825-482C-4644-8BFF-41623BA438DC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +57,14 @@ Global
 		{6D5C4A7D-2BF2-4B61-804E-A1525E9F2B9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D5C4A7D-2BF2-4B61-804E-A1525E9F2B9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D5C4A7D-2BF2-4B61-804E-A1525E9F2B9E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBA45E7D-0C82-4791-A014-F7A380FEA871}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBA45E7D-0C82-4791-A014-F7A380FEA871}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBA45E7D-0C82-4791-A014-F7A380FEA871}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBA45E7D-0C82-4791-A014-F7A380FEA871}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0D2F825-482C-4644-8BFF-41623BA438DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0D2F825-482C-4644-8BFF-41623BA438DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0D2F825-482C-4644-8BFF-41623BA438DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0D2F825-482C-4644-8BFF-41623BA438DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,6 +76,9 @@ Global
 		{B8918365-0172-43EB-A67A-70854ED38C6A} = {0E1205C0-F327-4856-9ADB-1F201F8E8FC3}
 		{D2C5487D-6E14-46BB-B575-64D9BFB1BCAF} = {BEF62F82-D4E7-4EAF-8E40-44AF493AAC79}
 		{6D5C4A7D-2BF2-4B61-804E-A1525E9F2B9E} = {D2C5487D-6E14-46BB-B575-64D9BFB1BCAF}
+		{B4BA701B-F2ED-418E-96FE-E798AF4D8B20} = {BEF62F82-D4E7-4EAF-8E40-44AF493AAC79}
+		{FBA45E7D-0C82-4791-A014-F7A380FEA871} = {B4BA701B-F2ED-418E-96FE-E798AF4D8B20}
+		{B0D2F825-482C-4644-8BFF-41623BA438DC} = {AD954844-E711-48F4-8185-AB2123121710}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {72072771-E83C-4F3F-8A29-7CEB681340CC}
