@@ -11,6 +11,7 @@ namespace AgendaAutomatizada.Interfaces
 
 
         IUsuarioRepository Usuarios { get; }
+        ITandaRepository Tandas { get; }
         //INombreDeLaInterfaz ComoSeraLlamadaEnLaAplicaicon { get; }
 
         void Dispose();
