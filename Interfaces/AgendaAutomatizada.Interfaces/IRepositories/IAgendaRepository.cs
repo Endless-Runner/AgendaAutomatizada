@@ -5,9 +5,9 @@ using System.Text;
 
 namespace AgendaAutomatizada.Interfaces.IRepositories
 {
-    public interface ITandaRepository : IBaseRepository<Tandas>
+    public interface IAgendaRepository : IBaseRepository<Agenda>
     {
-        void addTanda(Tandas tandas);
-        void Update(Tandas tandas);
+        void addAgenda(Agenda agenda);
+        void Update(Agenda agenda);
     }
 }

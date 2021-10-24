@@ -12,7 +12,7 @@ namespace AgendaAutomatizada.Repository.Repositories
         public TandaRepository(AgendaDbContext context) : base(context) { }
         public AgendaDbContext AgendaContext { get { return context; } }
 
-        public void addUsuario(Tandas tandas)
+        public void addTanda(Tandas tandas)
         {
             tandas.FechaCreacion = DateTime.UtcNow.AddMinutes(-240);
             tandas.Estado = true;
