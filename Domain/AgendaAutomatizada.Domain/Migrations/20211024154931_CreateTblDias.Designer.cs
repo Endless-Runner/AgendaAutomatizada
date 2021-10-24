@@ -4,14 +4,16 @@ using AgendaAutomatizada.Domain.SQL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace AgendaAutomatizada.Domain.Migrations
 {
     [DbContext(typeof(AgendaDbContext))]
-    partial class AgendaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211024154931_CreateTblDias")]
+    partial class CreateTblDias
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -37,9 +39,6 @@ namespace AgendaAutomatizada.Domain.Migrations
 
                     b.Property<int>("IdUsuario")
                         .HasColumnType("int");
-
-                    b.Property<string>("Nombre")
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 

@@ -13,6 +13,8 @@ namespace AgendaAutomatizada.Interfaces
         IUsuarioRepository Usuarios { get; }
         ITandaRepository Tandas { get; }
         IAgendaRepository Agendas { get; }
+        IHorarioRepository Horarios { get; }
+        IDiaRepository Dias { get; }
         //INombreDeLaInterfaz ComoSeraLlamadaEnLaAplicaicon { get; }
 
         void Dispose();

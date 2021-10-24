@@ -8,10 +8,12 @@ namespace AgendaAutomatizada.Domain.Entities
     {
         public int IdTanda { get; set; }
         public int IdAgenda { get; set; }
+        public int idDia { get; set; }
         public string Nombre { get; set; }
 
         public Tandas Tandas { get; set; }
         public Agenda Agenda { get; set; }
+        public Dia Dia { get; set; }
 
     }
 }

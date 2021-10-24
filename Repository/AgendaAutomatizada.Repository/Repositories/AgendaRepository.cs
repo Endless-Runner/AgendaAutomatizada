@@ -23,6 +23,7 @@ namespace AgendaAutomatizada.Repository.Repositories
         {
             var agendaToUpdate = Get(agenda.Id);
             agendaToUpdate.Estado = agenda.Estado;
+            agendaToUpdate.Nombre = agenda.Nombre;
             agendaToUpdate.FechaModificacion = DateTime.UtcNow.AddMinutes(-240);
         }
     }

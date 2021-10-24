@@ -4,11 +4,9 @@ using System.Text;
 
 namespace AgendaAutomatizada.Domain.Entities
 {
-    public class Agenda : GenericEntity
+    public class Dia : GenericEntity
     {
-        public int IdUsuario { get; set; }
-        public string Nombre { get; set; }
-
+        public string Descripcion { get; set; }
         public ICollection<Horario> Horarios { get; set; }
     }
 }

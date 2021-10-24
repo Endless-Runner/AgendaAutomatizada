@@ -22,6 +22,7 @@ namespace AgendaAutomatizada.Domain.SQL
             builder.ApplyConfiguration(new AgendaConfiguration());
             builder.ApplyConfiguration(new TandasConfiguration());
             builder.ApplyConfiguration(new HorarioConfiguration());
+            builder.ApplyConfiguration(new DiaConfiguration());
             //builder.ApplyConfiguration(new NombreDeLaConfiguracion());
 
         }
@@ -29,6 +30,7 @@ namespace AgendaAutomatizada.Domain.SQL
         public DbSet<Agenda> Agendas { get; set; }
         public DbSet<Tandas> Tandas { get; set; }
         public DbSet<Horario> Horarios { get; set; }
+        public DbSet<Dia> Dias { get; set; }
         //public DbSet<NombreDeLaClase> NombreUtilizadoEnElCodigo { get; set; }
     }
 }

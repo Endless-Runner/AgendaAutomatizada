@@ -23,6 +23,11 @@ namespace AgendaAutomatizada.Domain.EntityConfiguration
                 .WithMany(t => t.Horarios)
                 .HasForeignKey(h => h.IdAgenda)
                 .OnDelete(DeleteBehavior.ClientSetNull);
+
+            builder.HasOne(h => h.Dia)
+                .WithMany(t => t.Horarios)
+                .HasForeignKey(h => h.idDia)
+                .OnDelete(DeleteBehavior.ClientSetNull);
         }
     }
 }
