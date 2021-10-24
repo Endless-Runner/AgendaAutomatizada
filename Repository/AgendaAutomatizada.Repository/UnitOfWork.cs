@@ -18,11 +18,13 @@ namespace AgendaAutomatizada.Repository
 
             Usuarios = new UsuarioRepository(_dbContext);
             Tandas = new TandaRepository(_dbContext);
+            Agendas = new AgendaRepository(_dbContext);
             //NombreDelObjeto = new NombreDelRepository(_dbContext);
         }
 
         public IUsuarioRepository Usuarios { get; private set; }
         public ITandaRepository Tandas { get; private set; }
+        public IAgendaRepository Agendas { get; private set; }
         //public INombreDelInterfazDelRepositorio NombreDelObjeto { get; private set; }
 
         public int Complete()
