@@ -60,10 +60,11 @@ namespace AgendaAutomatizada.Forms
             var Dias = _unitOfWork.ComboBox.DiasComboBox();
             var Tandas = _unitOfWork.ComboBox.TandaComboBox();
 
+            cbDias.Items.Clear();
             Dias.ForEach(data =>
             cbDias.Items.Insert(0, data.Text)
             );
-
+            cbTanda.Items.Clear();
             Tandas.ForEach(data =>
             cbTanda.Items.Insert(0, data.Text)
             );
@@ -253,6 +254,8 @@ namespace AgendaAutomatizada.Forms
             MantenimientoTandas.Visible = false;
             panel1.Visible = true;
             panel4.Visible = true;
+            LoadAgendas();
+            LoadDropDowns();
         }
 
         private void OpenDias_Click(object sender, EventArgs e)
@@ -290,6 +293,8 @@ namespace AgendaAutomatizada.Forms
             MantenimientoTandas.Visible = false;
             panel1.Visible = true;
             panel4.Visible = true;
+            LoadAgendas();
+            LoadDropDowns();
         }
 
         private void OpenTandas_Click(object sender, EventArgs e)

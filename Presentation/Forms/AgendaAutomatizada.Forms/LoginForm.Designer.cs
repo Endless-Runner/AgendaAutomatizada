@@ -39,6 +39,7 @@ namespace AgendaAutomatizada.Forms
             this.OpenDias = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbDias = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -90,7 +91,6 @@ namespace AgendaAutomatizada.Forms
             this.label17 = new System.Windows.Forms.Label();
             this.btnGuardarTanda = new System.Windows.Forms.Button();
             this.dtgvTanda = new System.Windows.Forms.DataGridView();
-            this.cbDias = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -226,6 +226,15 @@ namespace AgendaAutomatizada.Forms
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
             // 
+            // cbDias
+            // 
+            this.cbDias.FormattingEnabled = true;
+            this.cbDias.Location = new System.Drawing.Point(11, 34);
+            this.cbDias.Name = "cbDias";
+            this.cbDias.Size = new System.Drawing.Size(121, 23);
+            this.cbDias.TabIndex = 33;
+            this.cbDias.Text = "Dia";
+            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -318,10 +327,6 @@ namespace AgendaAutomatizada.Forms
             // cbTanda
             // 
             this.cbTanda.FormattingEnabled = true;
-            this.cbTanda.Items.AddRange(new object[] {
-            "Matutina",
-            "Vespertina",
-            "Nocturna"});
             this.cbTanda.Location = new System.Drawing.Point(10, 220);
             this.cbTanda.Name = "cbTanda";
             this.cbTanda.Size = new System.Drawing.Size(121, 23);
@@ -803,19 +808,6 @@ namespace AgendaAutomatizada.Forms
             this.dtgvTanda.TabIndex = 4;
             this.dtgvTanda.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvTanda_CellClick);
             // 
-            // cbDias
-            // 
-            this.cbDias.FormattingEnabled = true;
-            this.cbDias.Items.AddRange(new object[] {
-            "Matutina",
-            "Vespertina",
-            "Nocturna"});
-            this.cbDias.Location = new System.Drawing.Point(11, 34);
-            this.cbDias.Name = "cbDias";
-            this.cbDias.Size = new System.Drawing.Size(121, 23);
-            this.cbDias.TabIndex = 33;
-            this.cbDias.Text = "Jornada";
-            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -824,11 +816,11 @@ namespace AgendaAutomatizada.Forms
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(684, 461);
             this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MantenimientoTandas);
             this.Controls.Add(this.MantenimientoDias);
+            this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "LoginForm";
