@@ -35,6 +35,8 @@ namespace AgendaAutomatizada.Repository.Repositories
                 || u.Correo.ToLower().Equals(usuario.ToLower()))
                 && u.Password.ToLower().Equals(clave.ToLower()));
 
-
+        public int GetId(string usuario) => context.Usuarios
+                .FirstOrDefault(u => (u.Apodo.ToLower().Equals(usuario.ToLower())
+                || u.Correo.ToLower().Equals(usuario.ToLower()))).Id;
     }
 }

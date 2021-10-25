@@ -3,6 +3,7 @@ using AgendaAutomatizada.Domain.SQL;
 using AgendaAutomatizada.Interfaces.IRepositories;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace AgendaAutomatizada.Repository.Repositories
@@ -26,5 +27,12 @@ namespace AgendaAutomatizada.Repository.Repositories
             agendaToUpdate.Nombre = agenda.Nombre;
             agendaToUpdate.FechaModificacion = DateTime.UtcNow.AddMinutes(-240);
         }
+
+        public dynamic ListAgendaById(int id) => context.Agendas.Where(a => a.IdUsuario == id)
+            .Select(a => new
+            {
+                a.Nombre,
+                a.Horarios,
+            }).ToList();
     }
 }

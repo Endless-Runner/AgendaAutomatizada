@@ -10,5 +10,6 @@ namespace AgendaAutomatizada.Interfaces.IRepositories
         void addUsuario(Usuario usuario);
         void Update(Usuario usuario);
         bool Login(string usuario, string clave);
+        int GetId(string usuario);
     }
 }

@@ -39,15 +39,7 @@ namespace AgendaAutomatizada.Forms
             this.OpenDias = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -55,7 +47,7 @@ namespace AgendaAutomatizada.Forms
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbTanda = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -78,6 +70,19 @@ namespace AgendaAutomatizada.Forms
             this.dtgvDias = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
             this.tbDescripcionGuardarDias = new System.Windows.Forms.TextBox();
+            this.MantenimientoTandas = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.btnBackMantenimientoTanda = new System.Windows.Forms.Button();
+            this.rdbtnInactivoTanda = new System.Windows.Forms.RadioButton();
+            this.rdbtnActivoTanda = new System.Windows.Forms.RadioButton();
+            this.btnEditTanda = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.tbEditTanda = new System.Windows.Forms.TextBox();
+            this.btnGuardarTanda = new System.Windows.Forms.Button();
+            this.dtgvTanda = new System.Windows.Forms.DataGridView();
+            this.label13 = new System.Windows.Forms.Label();
+            this.tbGuardarTanda = new System.Windows.Forms.TextBox();
+            this.cbDias = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -85,6 +90,8 @@ namespace AgendaAutomatizada.Forms
             this.panel4.SuspendLayout();
             this.MantenimientoDias.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDias)).BeginInit();
+            this.MantenimientoTandas.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvTanda)).BeginInit();
             this.SuspendLayout();
             // 
             // tbUser
@@ -157,7 +164,7 @@ namespace AgendaAutomatizada.Forms
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cbTanda);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Location = new System.Drawing.Point(2, 0);
@@ -174,6 +181,7 @@ namespace AgendaAutomatizada.Forms
             this.OpenTandas.TabIndex = 32;
             this.OpenTandas.Text = "Mantenimiento Tandas";
             this.OpenTandas.UseVisualStyleBackColor = true;
+            this.OpenTandas.Click += new System.EventHandler(this.OpenTandas_Click);
             // 
             // OpenDias
             // 
@@ -199,128 +207,25 @@ namespace AgendaAutomatizada.Forms
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.checkBox5);
+            this.groupBox1.Controls.Add(this.cbDias);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox3);
-            this.groupBox1.Controls.Add(this.checkBox4);
-            this.groupBox1.Controls.Add(this.checkBox9);
-            this.groupBox1.Controls.Add(this.checkBox6);
-            this.groupBox1.Controls.Add(this.checkBox8);
-            this.groupBox1.Controls.Add(this.checkBox7);
             this.groupBox1.Location = new System.Drawing.Point(0, 238);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 158);
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
             // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox5.Location = new System.Drawing.Point(92, 43);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(64, 17);
-            this.checkBox5.TabIndex = 19;
-            this.checkBox5.Text = "Martes";
-            this.checkBox5.UseVisualStyleBackColor = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(74, 8);
+            this.label6.Location = new System.Drawing.Point(12, 8);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 13);
             this.label6.TabIndex = 15;
             this.label6.Text = "Dias";
             this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox2.Location = new System.Drawing.Point(2, 42);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(60, 17);
-            this.checkBox2.TabIndex = 16;
-            this.checkBox2.Text = "Lunes";
-            this.checkBox2.UseVisualStyleBackColor = false;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox3.Location = new System.Drawing.Point(2, 68);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(80, 17);
-            this.checkBox3.TabIndex = 17;
-            this.checkBox3.Text = "Miercoles";
-            this.checkBox3.UseVisualStyleBackColor = false;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox4.Location = new System.Drawing.Point(2, 94);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(68, 17);
-            this.checkBox4.TabIndex = 18;
-            this.checkBox4.Text = "Viernes";
-            this.checkBox4.UseVisualStyleBackColor = false;
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox9.Location = new System.Drawing.Point(92, 119);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(108, 17);
-            this.checkBox9.TabIndex = 23;
-            this.checkBox9.Text = "Todos los dias";
-            this.checkBox9.UseVisualStyleBackColor = false;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox6.Location = new System.Drawing.Point(92, 68);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(66, 17);
-            this.checkBox6.TabIndex = 20;
-            this.checkBox6.Text = "Jueves";
-            this.checkBox6.UseVisualStyleBackColor = false;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox8.Location = new System.Drawing.Point(2, 120);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(75, 17);
-            this.checkBox8.TabIndex = 22;
-            this.checkBox8.Text = "Domingo";
-            this.checkBox8.UseVisualStyleBackColor = false;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox7.Location = new System.Drawing.Point(92, 93);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(69, 17);
-            this.checkBox7.TabIndex = 21;
-            this.checkBox7.Text = "Sábado";
-            this.checkBox7.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
@@ -402,18 +307,18 @@ namespace AgendaAutomatizada.Forms
             this.label5.TabIndex = 12;
             this.label5.Text = "Es a una hora especifica";
             // 
-            // comboBox1
+            // cbTanda
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbTanda.FormattingEnabled = true;
+            this.cbTanda.Items.AddRange(new object[] {
             "Matutina",
             "Vespertina",
             "Nocturna"});
-            this.comboBox1.Location = new System.Drawing.Point(10, 220);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 11;
-            this.comboBox1.Text = "Jornada";
+            this.cbTanda.Location = new System.Drawing.Point(10, 220);
+            this.cbTanda.Name = "cbTanda";
+            this.cbTanda.Size = new System.Drawing.Size(121, 23);
+            this.cbTanda.TabIndex = 11;
+            this.cbTanda.Text = "Jornada";
             // 
             // label4
             // 
@@ -648,6 +553,145 @@ namespace AgendaAutomatizada.Forms
             this.tbDescripcionGuardarDias.Size = new System.Drawing.Size(177, 23);
             this.tbDescripcionGuardarDias.TabIndex = 0;
             // 
+            // MantenimientoTandas
+            // 
+            this.MantenimientoTandas.Controls.Add(this.label11);
+            this.MantenimientoTandas.Controls.Add(this.btnBackMantenimientoTanda);
+            this.MantenimientoTandas.Controls.Add(this.rdbtnInactivoTanda);
+            this.MantenimientoTandas.Controls.Add(this.rdbtnActivoTanda);
+            this.MantenimientoTandas.Controls.Add(this.btnEditTanda);
+            this.MantenimientoTandas.Controls.Add(this.label12);
+            this.MantenimientoTandas.Controls.Add(this.tbEditTanda);
+            this.MantenimientoTandas.Controls.Add(this.btnGuardarTanda);
+            this.MantenimientoTandas.Controls.Add(this.dtgvTanda);
+            this.MantenimientoTandas.Controls.Add(this.label13);
+            this.MantenimientoTandas.Controls.Add(this.tbGuardarTanda);
+            this.MantenimientoTandas.Location = new System.Drawing.Point(0, 0);
+            this.MantenimientoTandas.Name = "MantenimientoTandas";
+            this.MantenimientoTandas.Size = new System.Drawing.Size(681, 463);
+            this.MantenimientoTandas.TabIndex = 13;
+            this.MantenimientoTandas.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(376, 80);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(45, 15);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "Estado:";
+            // 
+            // btnBackMantenimientoTanda
+            // 
+            this.btnBackMantenimientoTanda.Location = new System.Drawing.Point(14, 12);
+            this.btnBackMantenimientoTanda.Name = "btnBackMantenimientoTanda";
+            this.btnBackMantenimientoTanda.Size = new System.Drawing.Size(75, 23);
+            this.btnBackMantenimientoTanda.TabIndex = 12;
+            this.btnBackMantenimientoTanda.Text = "Back";
+            this.btnBackMantenimientoTanda.UseVisualStyleBackColor = true;
+            this.btnBackMantenimientoTanda.Click += new System.EventHandler(this.btnBackMantenimientoTanda_Click);
+            // 
+            // rdbtnInactivoTanda
+            // 
+            this.rdbtnInactivoTanda.AutoSize = true;
+            this.rdbtnInactivoTanda.Location = new System.Drawing.Point(519, 78);
+            this.rdbtnInactivoTanda.Name = "rdbtnInactivoTanda";
+            this.rdbtnInactivoTanda.Size = new System.Drawing.Size(67, 19);
+            this.rdbtnInactivoTanda.TabIndex = 10;
+            this.rdbtnInactivoTanda.TabStop = true;
+            this.rdbtnInactivoTanda.Text = "Inactivo";
+            this.rdbtnInactivoTanda.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnActivoTanda
+            // 
+            this.rdbtnActivoTanda.AutoSize = true;
+            this.rdbtnActivoTanda.Location = new System.Drawing.Point(451, 78);
+            this.rdbtnActivoTanda.Name = "rdbtnActivoTanda";
+            this.rdbtnActivoTanda.Size = new System.Drawing.Size(59, 19);
+            this.rdbtnActivoTanda.TabIndex = 9;
+            this.rdbtnActivoTanda.TabStop = true;
+            this.rdbtnActivoTanda.Text = "Activo";
+            this.rdbtnActivoTanda.UseVisualStyleBackColor = true;
+            // 
+            // btnEditTanda
+            // 
+            this.btnEditTanda.Location = new System.Drawing.Point(519, 126);
+            this.btnEditTanda.Name = "btnEditTanda";
+            this.btnEditTanda.Size = new System.Drawing.Size(75, 23);
+            this.btnEditTanda.TabIndex = 8;
+            this.btnEditTanda.Text = "Guardar";
+            this.btnEditTanda.UseVisualStyleBackColor = true;
+            this.btnEditTanda.Click += new System.EventHandler(this.btnEditTanda_Click);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(376, 51);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(72, 15);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Descripción:";
+            // 
+            // tbEditTanda
+            // 
+            this.tbEditTanda.Location = new System.Drawing.Point(451, 48);
+            this.tbEditTanda.Name = "tbEditTanda";
+            this.tbEditTanda.Size = new System.Drawing.Size(177, 23);
+            this.tbEditTanda.TabIndex = 6;
+            // 
+            // btnGuardarTanda
+            // 
+            this.btnGuardarTanda.Location = new System.Drawing.Point(218, 103);
+            this.btnGuardarTanda.Name = "btnGuardarTanda";
+            this.btnGuardarTanda.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardarTanda.TabIndex = 5;
+            this.btnGuardarTanda.Text = "Guardar";
+            this.btnGuardarTanda.UseVisualStyleBackColor = true;
+            this.btnGuardarTanda.Click += new System.EventHandler(this.btnGuardarTanda_Click);
+            // 
+            // dtgvTanda
+            // 
+            this.dtgvTanda.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dtgvTanda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvTanda.Location = new System.Drawing.Point(12, 179);
+            this.dtgvTanda.MultiSelect = false;
+            this.dtgvTanda.Name = "dtgvTanda";
+            this.dtgvTanda.ReadOnly = true;
+            this.dtgvTanda.RowTemplate.Height = 25;
+            this.dtgvTanda.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvTanda.Size = new System.Drawing.Size(660, 270);
+            this.dtgvTanda.TabIndex = 4;
+            this.dtgvTanda.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvTanda_CellClick);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(29, 54);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(72, 15);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Descripción:";
+            // 
+            // tbGuardarTanda
+            // 
+            this.tbGuardarTanda.Location = new System.Drawing.Point(104, 51);
+            this.tbGuardarTanda.Name = "tbGuardarTanda";
+            this.tbGuardarTanda.Size = new System.Drawing.Size(177, 23);
+            this.tbGuardarTanda.TabIndex = 0;
+            // 
+            // cbDias
+            // 
+            this.cbDias.FormattingEnabled = true;
+            this.cbDias.Items.AddRange(new object[] {
+            "Matutina",
+            "Vespertina",
+            "Nocturna"});
+            this.cbDias.Location = new System.Drawing.Point(10, 24);
+            this.cbDias.Name = "cbDias";
+            this.cbDias.Size = new System.Drawing.Size(121, 23);
+            this.cbDias.TabIndex = 33;
+            this.cbDias.Text = "Dia";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -661,6 +705,7 @@ namespace AgendaAutomatizada.Forms
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MantenimientoDias);
+            this.Controls.Add(this.MantenimientoTandas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "LoginForm";
@@ -678,6 +723,9 @@ namespace AgendaAutomatizada.Forms
             this.MantenimientoDias.ResumeLayout(false);
             this.MantenimientoDias.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDias)).EndInit();
+            this.MantenimientoTandas.ResumeLayout(false);
+            this.MantenimientoTandas.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvTanda)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -690,17 +738,9 @@ namespace AgendaAutomatizada.Forms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbContraseña;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbTanda;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.CheckBox checkBox1;
@@ -733,6 +773,19 @@ namespace AgendaAutomatizada.Forms
         private System.Windows.Forms.Button btnBackMantenimientoDias;
         private System.Windows.Forms.Button OpenTandas;
         private System.Windows.Forms.Button OpenDias;
+        private System.Windows.Forms.Panel MantenimientoTandas;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Button btnBackMantenimientoTanda;
+        private System.Windows.Forms.RadioButton rdbtnInactivoTanda;
+        private System.Windows.Forms.RadioButton rdbtnActivoTanda;
+        private System.Windows.Forms.Button btnEditTanda;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox tbEditTanda;
+        private System.Windows.Forms.Button btnGuardarTanda;
+        private System.Windows.Forms.DataGridView dtgvTanda;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox tbGuardarTanda;
+        private System.Windows.Forms.ComboBox cbDias;
     }
 }
 

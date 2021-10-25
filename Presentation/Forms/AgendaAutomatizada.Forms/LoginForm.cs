@@ -14,6 +14,7 @@ namespace AgendaAutomatizada.Forms
 {
     public partial class LoginForm : Form
     {
+        private int _idUser;
         private readonly IUnitOfWork _unitOfWork;
 
         public LoginForm()
@@ -37,6 +38,7 @@ namespace AgendaAutomatizada.Forms
             var usuario = tbUser.Text;
             var clave = tbContraseña.Text;
             var success = _unitOfWork.Usuarios.Login(usuario, clave);
+            _idUser = _unitOfWork.Usuarios.GetId(usuario);
 
 
             if (success)
@@ -44,6 +46,8 @@ namespace AgendaAutomatizada.Forms
                 panel2.Visible = false;
                 panel1.Visible = true;
                 panel4.Visible = true;
+                LoadAgendas();
+                LoadDropDowns();
             }
             else
             {
@@ -68,6 +72,26 @@ namespace AgendaAutomatizada.Forms
             {
                 MessageBox.Show("Introduzca una descripción.");
             }
+        }
+
+        private void LoadAgendas()
+        {
+            var ListAgenda = _unitOfWork.Agendas.ListAgendaById(_idUser);
+        }
+
+        private void LoadDropDowns()
+        {
+            var Dias = _unitOfWork.ComboBox.DiasComboBox();
+            var Tandas = _unitOfWork.ComboBox.TandaComboBox();
+
+            Dias.ForEach(data =>
+            cbDias.Items.Insert(data.Id - 1, data.Text)
+            );
+
+            Tandas.ForEach(data =>
+            cbTanda.Items.Insert(data.Id - 1, data.Text)
+            );
+
         }
 
         public void SelectDataDiasToEdit()
@@ -114,21 +138,60 @@ namespace AgendaAutomatizada.Forms
             dtgvDias.DataSource = ListDias.ToList();
         }
 
+        public void SelectDataTandaToEdit()
+        {
+            tbEditTanda.Text = dtgvTanda.SelectedRows[0].Cells[0].Value.ToString();
+            var estado = (bool)dtgvTanda.SelectedRows[0].Cells[5].Value;
+            if (estado == true)
+            {
+                rdbtnActivoTanda.Checked = true;
+            }
+            else
+            {
+                rdbtnInactivoTanda.Checked = true;
+            }
+        }
+
         private void dtgvTandasData()
         {
             var ListTandas = _unitOfWork.Tandas.GetAll();
-            //dtgvTandas.DataSource = ListTandas.ToList();
+            dtgvTanda.DataSource = ListTandas.ToList();
         }
 
-        /*private void GuardarTandas()
+        private void GuardarTandas()
         {
-            var Descripcion = tbDescripcionGuardarTandas.Text;
+            var Descripcion = tbGuardarTanda.Text;
             _unitOfWork.Tandas.addTanda(new Tandas()
             {
                 Descripcion = Descripcion,
             });
             _unitOfWork.Complete();
-        }*/
+            dtgvTandasData();
+        }
+
+        private void UpdateTandas()
+        {
+            var Id = int.Parse(dtgvTanda.SelectedRows[0].Cells[2].Value.ToString());
+            var Descripcion = tbEditTanda.Text;
+            var Estado = (rdbtnActivoTanda.Checked == true) ? true : false;
+
+            if (Descripcion != "")
+            {
+                _unitOfWork.Tandas.Update(new Tandas()
+                {
+                    Id = Id,
+                    Descripcion = Descripcion,
+                    Estado = Estado
+
+                });
+                _unitOfWork.Complete();
+                dtgvTandasData();
+            }
+            else
+            {
+                MessageBox.Show("Introduzca una descripción.");
+            }
+        }
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
@@ -192,6 +255,7 @@ namespace AgendaAutomatizada.Forms
         private void btnBackMantenimientoDias_Click(object sender, EventArgs e)
         {
             MantenimientoDias.Visible = false;
+            MantenimientoTandas.Visible = false;
             panel1.Visible = true;
             panel4.Visible = true;
         }
@@ -199,6 +263,7 @@ namespace AgendaAutomatizada.Forms
         private void OpenDias_Click(object sender, EventArgs e)
         {
             MantenimientoDias.Visible = true;
+            MantenimientoTandas.Visible = false;
             panel1.Visible = false;
             panel4.Visible = false;
             dtgvDiasData();
@@ -207,6 +272,38 @@ namespace AgendaAutomatizada.Forms
         private void dtgvDias_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             SelectDataDiasToEdit();
+        }
+
+        private void dtgvTanda_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            SelectDataTandaToEdit();
+        }
+
+        private void btnEditTanda_Click(object sender, EventArgs e)
+        {
+            UpdateTandas();
+        }
+
+        private void btnGuardarTanda_Click(object sender, EventArgs e)
+        {
+            GuardarTandas();
+        }
+
+        private void btnBackMantenimientoTanda_Click(object sender, EventArgs e)
+        {
+            MantenimientoDias.Visible = false;
+            MantenimientoTandas.Visible = false;
+            panel1.Visible = true;
+            panel4.Visible = true;
+        }
+
+        private void OpenTandas_Click(object sender, EventArgs e)
+        {
+            MantenimientoTandas.Visible = true;
+            MantenimientoDias.Visible = false;
+            panel1.Visible = false;
+            panel4.Visible = false;
+            dtgvTandasData();
         }
     }
 }
