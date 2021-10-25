@@ -21,6 +21,7 @@ namespace AgendaAutomatizada.Repository
             Agendas = new AgendaRepository(_dbContext);
             Horarios = new HorarioRepository(_dbContext);
             Dias = new DiaRepository(_dbContext);
+            ComboBox = new ComboBoxRepository(_dbContext);
             //NombreDelObjeto = new NombreDelRepository(_dbContext);
         }
 
@@ -29,6 +30,7 @@ namespace AgendaAutomatizada.Repository
         public IAgendaRepository Agendas { get; private set; }
         public IHorarioRepository Horarios { get; private set; }
         public IDiaRepository Dias { get; private set; }
+        public IComboBoxRepository ComboBox { get; private set; }
         //public INombreDelInterfazDelRepositorio NombreDelObjeto { get; private set; }
 
         public int Complete()

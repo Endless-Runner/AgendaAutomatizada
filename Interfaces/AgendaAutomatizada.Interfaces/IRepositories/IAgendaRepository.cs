@@ -9,5 +9,6 @@ namespace AgendaAutomatizada.Interfaces.IRepositories
     {
         void addAgenda(Agenda agenda);
         void Update(Agenda agenda);
+        dynamic ListAgendaById(int id);
     }
 }

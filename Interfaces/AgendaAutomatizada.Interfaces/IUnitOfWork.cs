@@ -15,6 +15,7 @@ namespace AgendaAutomatizada.Interfaces
         IAgendaRepository Agendas { get; }
         IHorarioRepository Horarios { get; }
         IDiaRepository Dias { get; }
+        IComboBoxRepository ComboBox { get; }
         //INombreDeLaInterfaz ComoSeraLlamadaEnLaAplicaicon { get; }
 
         void Dispose();

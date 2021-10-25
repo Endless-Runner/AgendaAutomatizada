@@ -55,7 +55,7 @@ namespace AgendaAutomatizada.Forms
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbTanda = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -82,6 +82,22 @@ namespace AgendaAutomatizada.Forms
             this.label8 = new System.Windows.Forms.Label();
             this.BtnGuardarDias = new System.Windows.Forms.Button();
             this.dtgvDias = new System.Windows.Forms.DataGridView();
+            this.MantenimientoTandas = new System.Windows.Forms.Panel();
+            this.btnBackMantenimientoTanda = new System.Windows.Forms.Button();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.btnEditTanda = new System.Windows.Forms.Button();
+            this.tbEditTanda = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.rdbtnInactivoTanda = new System.Windows.Forms.RadioButton();
+            this.rdbtnActivoTanda = new System.Windows.Forms.RadioButton();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.tbGuardarTanda = new System.Windows.Forms.TextBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.btnGuardarTanda = new System.Windows.Forms.Button();
+            this.dtgvTanda = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -91,6 +107,10 @@ namespace AgendaAutomatizada.Forms
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDias)).BeginInit();
+            this.MantenimientoTandas.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvTanda)).BeginInit();
             this.SuspendLayout();
             // 
             // tbUser
@@ -151,7 +171,6 @@ namespace AgendaAutomatizada.Forms
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.panel1.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.hand_painted_watercolor_background_with_sky_clouds_shape_24972_1095;
             this.panel1.Controls.Add(this.OpenTandas);
             this.panel1.Controls.Add(this.OpenDias);
             this.panel1.Controls.Add(this.label7);
@@ -163,7 +182,7 @@ namespace AgendaAutomatizada.Forms
             this.panel1.Controls.Add(this.textBox2);
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.cbTanda);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Location = new System.Drawing.Point(2, 0);
@@ -180,6 +199,7 @@ namespace AgendaAutomatizada.Forms
             this.OpenTandas.TabIndex = 32;
             this.OpenTandas.Text = "Mantenimiento Tandas";
             this.OpenTandas.UseVisualStyleBackColor = true;
+            this.OpenTandas.Click += new System.EventHandler(this.OpenTandas_Click);
             // 
             // OpenDias
             // 
@@ -330,7 +350,6 @@ namespace AgendaAutomatizada.Forms
             // 
             // button5
             // 
-            this.button5.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.delete;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button5.Location = new System.Drawing.Point(135, 3);
@@ -342,7 +361,6 @@ namespace AgendaAutomatizada.Forms
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.edit;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button4.Location = new System.Drawing.Point(69, 3);
@@ -354,7 +372,6 @@ namespace AgendaAutomatizada.Forms
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.plus;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.Location = new System.Drawing.Point(3, 3);
@@ -408,18 +425,18 @@ namespace AgendaAutomatizada.Forms
             this.label5.TabIndex = 12;
             this.label5.Text = "Es a una hora especifica";
             // 
-            // comboBox1
+            // cbTanda
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbTanda.FormattingEnabled = true;
+            this.cbTanda.Items.AddRange(new object[] {
             "Matutina",
             "Vespertina",
             "Nocturna"});
-            this.comboBox1.Location = new System.Drawing.Point(10, 220);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 11;
-            this.comboBox1.Text = "Jornada";
+            this.cbTanda.Location = new System.Drawing.Point(10, 220);
+            this.cbTanda.Name = "cbTanda";
+            this.cbTanda.Size = new System.Drawing.Size(121, 23);
+            this.cbTanda.TabIndex = 11;
+            this.cbTanda.Text = "Jornada";
             // 
             // label4
             // 
@@ -479,7 +496,6 @@ namespace AgendaAutomatizada.Forms
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
-            this.panel3.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.free_user_login_icon_305_thumb;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3.ForeColor = System.Drawing.Color.Transparent;
             this.panel3.Location = new System.Drawing.Point(80, 3);
@@ -490,7 +506,6 @@ namespace AgendaAutomatizada.Forms
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources._65000;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.ForeColor = System.Drawing.Color.Transparent;
@@ -530,7 +545,6 @@ namespace AgendaAutomatizada.Forms
             // 
             // MantenimientoDias
             // 
-            this.MantenimientoDias.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.hand_painted_watercolor_background_with_sky_clouds_shape_24972_1095;
             this.MantenimientoDias.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.MantenimientoDias.Controls.Add(this.btnBackMantenimientoDias);
             this.MantenimientoDias.Controls.Add(this.groupBox3);
@@ -545,7 +559,6 @@ namespace AgendaAutomatizada.Forms
             // btnBackMantenimientoDias
             // 
             this.btnBackMantenimientoDias.BackColor = System.Drawing.Color.Transparent;
-            this.btnBackMantenimientoDias.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.back;
             this.btnBackMantenimientoDias.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBackMantenimientoDias.Location = new System.Drawing.Point(-2, -6);
             this.btnBackMantenimientoDias.Name = "btnBackMantenimientoDias";
@@ -715,14 +728,199 @@ namespace AgendaAutomatizada.Forms
             this.dtgvDias.TabIndex = 4;
             this.dtgvDias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDias_CellClick);
             // 
+            // MantenimientoTandas
+            // 
+            this.MantenimientoTandas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MantenimientoTandas.Controls.Add(this.btnBackMantenimientoTanda);
+            this.MantenimientoTandas.Controls.Add(this.groupBox4);
+            this.MantenimientoTandas.Controls.Add(this.groupBox5);
+            this.MantenimientoTandas.Controls.Add(this.dtgvTanda);
+            this.MantenimientoTandas.Location = new System.Drawing.Point(2, -1);
+            this.MantenimientoTandas.Name = "MantenimientoTandas";
+            this.MantenimientoTandas.Size = new System.Drawing.Size(681, 463);
+            this.MantenimientoTandas.TabIndex = 10;
+            this.MantenimientoTandas.Visible = false;
+            // 
+            // btnBackMantenimientoTanda
+            // 
+            this.btnBackMantenimientoTanda.BackColor = System.Drawing.Color.Transparent;
+            this.btnBackMantenimientoTanda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBackMantenimientoTanda.Location = new System.Drawing.Point(-2, -6);
+            this.btnBackMantenimientoTanda.Name = "btnBackMantenimientoTanda";
+            this.btnBackMantenimientoTanda.Size = new System.Drawing.Size(33, 33);
+            this.btnBackMantenimientoTanda.TabIndex = 12;
+            this.btnBackMantenimientoTanda.UseVisualStyleBackColor = false;
+            this.btnBackMantenimientoTanda.Click += new System.EventHandler(this.btnBackMantenimientoTanda_Click);
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.btnEditTanda);
+            this.groupBox4.Controls.Add(this.tbEditTanda);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.label15);
+            this.groupBox4.Controls.Add(this.rdbtnInactivoTanda);
+            this.groupBox4.Controls.Add(this.rdbtnActivoTanda);
+            this.groupBox4.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox4.Location = new System.Drawing.Point(338, 0);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(334, 142);
+            this.groupBox4.TabIndex = 7;
+            this.groupBox4.TabStop = false;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.BackColor = System.Drawing.Color.Transparent;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label13.Location = new System.Drawing.Point(131, 13);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(69, 17);
+            this.label13.TabIndex = 7;
+            this.label13.Text = "Editar Día";
+            // 
+            // btnEditTanda
+            // 
+            this.btnEditTanda.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnEditTanda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditTanda.ForeColor = System.Drawing.Color.White;
+            this.btnEditTanda.Location = new System.Drawing.Point(128, 108);
+            this.btnEditTanda.Name = "btnEditTanda";
+            this.btnEditTanda.Size = new System.Drawing.Size(75, 23);
+            this.btnEditTanda.TabIndex = 8;
+            this.btnEditTanda.Text = "Editar";
+            this.btnEditTanda.UseVisualStyleBackColor = false;
+            this.btnEditTanda.Click += new System.EventHandler(this.btnEditTanda_Click);
+            // 
+            // tbEditTanda
+            // 
+            this.tbEditTanda.Location = new System.Drawing.Point(98, 43);
+            this.tbEditTanda.Name = "tbEditTanda";
+            this.tbEditTanda.Size = new System.Drawing.Size(211, 23);
+            this.tbEditTanda.TabIndex = 6;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Location = new System.Drawing.Point(23, 75);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(46, 15);
+            this.label14.TabIndex = 11;
+            this.label14.Text = "Estado:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.BackColor = System.Drawing.Color.Transparent;
+            this.label15.Location = new System.Drawing.Point(23, 46);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(75, 15);
+            this.label15.TabIndex = 7;
+            this.label15.Text = "Descripción:";
+            // 
+            // rdbtnInactivoTanda
+            // 
+            this.rdbtnInactivoTanda.AutoSize = true;
+            this.rdbtnInactivoTanda.BackColor = System.Drawing.Color.Transparent;
+            this.rdbtnInactivoTanda.Location = new System.Drawing.Point(166, 73);
+            this.rdbtnInactivoTanda.Name = "rdbtnInactivoTanda";
+            this.rdbtnInactivoTanda.Size = new System.Drawing.Size(70, 19);
+            this.rdbtnInactivoTanda.TabIndex = 10;
+            this.rdbtnInactivoTanda.TabStop = true;
+            this.rdbtnInactivoTanda.Text = "Inactivo";
+            this.rdbtnInactivoTanda.UseVisualStyleBackColor = false;
+            // 
+            // rdbtnActivoTanda
+            // 
+            this.rdbtnActivoTanda.AutoSize = true;
+            this.rdbtnActivoTanda.BackColor = System.Drawing.Color.Transparent;
+            this.rdbtnActivoTanda.Location = new System.Drawing.Point(98, 73);
+            this.rdbtnActivoTanda.Name = "rdbtnActivoTanda";
+            this.rdbtnActivoTanda.Size = new System.Drawing.Size(61, 19);
+            this.rdbtnActivoTanda.TabIndex = 9;
+            this.rdbtnActivoTanda.TabStop = true;
+            this.rdbtnActivoTanda.Text = "Activo";
+            this.rdbtnActivoTanda.UseVisualStyleBackColor = false;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox5.Controls.Add(this.label16);
+            this.groupBox5.Controls.Add(this.tbGuardarTanda);
+            this.groupBox5.Controls.Add(this.label17);
+            this.groupBox5.Controls.Add(this.btnGuardarTanda);
+            this.groupBox5.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox5.Location = new System.Drawing.Point(11, 0);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(321, 142);
+            this.groupBox5.TabIndex = 13;
+            this.groupBox5.TabStop = false;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label16.Location = new System.Drawing.Point(106, 13);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(82, 17);
+            this.label16.TabIndex = 6;
+            this.label16.Text = "Agregar Día";
+            // 
+            // tbGuardarTanda
+            // 
+            this.tbGuardarTanda.Location = new System.Drawing.Point(21, 61);
+            this.tbGuardarTanda.Name = "tbGuardarTanda";
+            this.tbGuardarTanda.Size = new System.Drawing.Size(279, 23);
+            this.tbGuardarTanda.TabIndex = 0;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.BackColor = System.Drawing.Color.Transparent;
+            this.label17.Location = new System.Drawing.Point(21, 43);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(75, 15);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Descripción:";
+            // 
+            // btnGuardarTanda
+            // 
+            this.btnGuardarTanda.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnGuardarTanda.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardarTanda.ForeColor = System.Drawing.Color.White;
+            this.btnGuardarTanda.Location = new System.Drawing.Point(113, 108);
+            this.btnGuardarTanda.Name = "btnGuardarTanda";
+            this.btnGuardarTanda.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardarTanda.TabIndex = 5;
+            this.btnGuardarTanda.Text = "Guardar";
+            this.btnGuardarTanda.UseVisualStyleBackColor = false;
+            this.btnGuardarTanda.Click += new System.EventHandler(this.btnGuardarTanda_Click);
+            // 
+            // dtgvTanda
+            // 
+            this.dtgvTanda.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dtgvTanda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvTanda.Location = new System.Drawing.Point(12, 148);
+            this.dtgvTanda.MultiSelect = false;
+            this.dtgvTanda.Name = "dtgvTanda";
+            this.dtgvTanda.ReadOnly = true;
+            this.dtgvTanda.RowTemplate.Height = 25;
+            this.dtgvTanda.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvTanda.Size = new System.Drawing.Size(660, 301);
+            this.dtgvTanda.TabIndex = 4;
+            this.dtgvTanda.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvTanda_CellClick);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.hand_painted_watercolor_background_with_sky_clouds_shape_24972_1095;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(684, 461);
+            this.Controls.Add(this.MantenimientoTandas);
             this.Controls.Add(this.MantenimientoDias);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel2);
@@ -748,6 +946,12 @@ namespace AgendaAutomatizada.Forms
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDias)).EndInit();
+            this.MantenimientoTandas.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvTanda)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -760,7 +964,7 @@ namespace AgendaAutomatizada.Forms
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tbContraseña;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbTanda;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.CheckBox checkBox9;
@@ -807,6 +1011,22 @@ namespace AgendaAutomatizada.Forms
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel MantenimientoTandas;
+        private System.Windows.Forms.Button btnBackMantenimientoTanda;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button btnEditTanda;
+        private System.Windows.Forms.TextBox tbEditTanda;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.RadioButton rdbtnInactivoTanda;
+        private System.Windows.Forms.RadioButton rdbtnActivoTanda;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.TextBox tbGuardarTanda;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Button btnGuardarTanda;
+        private System.Windows.Forms.DataGridView dtgvTanda;
     }
 }
 
