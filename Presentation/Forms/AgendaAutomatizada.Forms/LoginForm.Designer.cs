@@ -164,6 +164,7 @@ namespace AgendaAutomatizada.Forms
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.panel1.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.hand_painted_watercolor_background_with_sky_clouds_shape_24972_1095;
             this.panel1.Controls.Add(this.OpenTandas);
             this.panel1.Controls.Add(this.OpenDias);
             this.panel1.Controls.Add(this.label7);
@@ -249,6 +250,7 @@ namespace AgendaAutomatizada.Forms
             // 
             // button5
             // 
+            this.button5.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.delete;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button5.Location = new System.Drawing.Point(135, 3);
@@ -260,6 +262,7 @@ namespace AgendaAutomatizada.Forms
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Transparent;
+            this.button4.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.edit;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button4.Location = new System.Drawing.Point(69, 3);
@@ -271,6 +274,7 @@ namespace AgendaAutomatizada.Forms
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Transparent;
+            this.button3.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.plus;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button3.Location = new System.Drawing.Point(3, 3);
@@ -391,6 +395,7 @@ namespace AgendaAutomatizada.Forms
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.Transparent;
+            this.panel3.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.free_user_login_icon_305_thumb;
             this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel3.ForeColor = System.Drawing.Color.Transparent;
             this.panel3.Location = new System.Drawing.Point(80, 3);
@@ -401,6 +406,7 @@ namespace AgendaAutomatizada.Forms
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Transparent;
+            this.button2.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources._65000;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button2.ForeColor = System.Drawing.Color.Transparent;
@@ -440,6 +446,7 @@ namespace AgendaAutomatizada.Forms
             // 
             // MantenimientoDias
             // 
+            this.MantenimientoDias.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.hand_painted_watercolor_background_with_sky_clouds_shape_24972_1095;
             this.MantenimientoDias.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.MantenimientoDias.Controls.Add(this.btnBackMantenimientoDias);
             this.MantenimientoDias.Controls.Add(this.groupBox3);
@@ -454,6 +461,7 @@ namespace AgendaAutomatizada.Forms
             // btnBackMantenimientoDias
             // 
             this.btnBackMantenimientoDias.BackColor = System.Drawing.Color.Transparent;
+            this.btnBackMantenimientoDias.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.back;
             this.btnBackMantenimientoDias.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBackMantenimientoDias.Location = new System.Drawing.Point(-2, -6);
             this.btnBackMantenimientoDias.Name = "btnBackMantenimientoDias";
@@ -625,6 +633,7 @@ namespace AgendaAutomatizada.Forms
             // 
             // MantenimientoTandas
             // 
+            this.MantenimientoTandas.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.hand_painted_watercolor_background_with_sky_clouds_shape_24972_1095;
             this.MantenimientoTandas.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.MantenimientoTandas.Controls.Add(this.btnBackMantenimientoTanda);
             this.MantenimientoTandas.Controls.Add(this.groupBox4);
@@ -639,6 +648,7 @@ namespace AgendaAutomatizada.Forms
             // btnBackMantenimientoTanda
             // 
             this.btnBackMantenimientoTanda.BackColor = System.Drawing.Color.Transparent;
+            this.btnBackMantenimientoTanda.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.back;
             this.btnBackMantenimientoTanda.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnBackMantenimientoTanda.Location = new System.Drawing.Point(-2, -6);
             this.btnBackMantenimientoTanda.Name = "btnBackMantenimientoTanda";
@@ -671,9 +681,9 @@ namespace AgendaAutomatizada.Forms
             this.label13.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.label13.Location = new System.Drawing.Point(131, 13);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(69, 17);
+            this.label13.Size = new System.Drawing.Size(85, 17);
             this.label13.TabIndex = 7;
-            this.label13.Text = "Editar Día";
+            this.label13.Text = "Editar Tanda";
             // 
             // btnEditTanda
             // 
@@ -760,9 +770,9 @@ namespace AgendaAutomatizada.Forms
             this.label16.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
             this.label16.Location = new System.Drawing.Point(106, 13);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(82, 17);
+            this.label16.Size = new System.Drawing.Size(98, 17);
             this.label16.TabIndex = 6;
-            this.label16.Text = "Agregar Día";
+            this.label16.Text = "Agregar Tanda";
             // 
             // tbGuardarTanda
             // 
@@ -813,14 +823,15 @@ namespace AgendaAutomatizada.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.hand_painted_watercolor_background_with_sky_clouds_shape_24972_1095;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(684, 461);
-            this.Controls.Add(this.flowLayoutPanel1);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.MantenimientoTandas);
             this.Controls.Add(this.MantenimientoDias);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "LoginForm";
