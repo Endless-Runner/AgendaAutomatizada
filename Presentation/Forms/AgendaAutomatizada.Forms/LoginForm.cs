@@ -29,6 +29,9 @@ namespace AgendaAutomatizada.Forms
         private void btAcceder_Click(object sender, EventArgs e)
         {
             Login();
+            panel2.Visible = false;
+            panel1.Visible = true;
+            panel4.Visible = true;
         }
 
         private void Login()
@@ -81,6 +84,20 @@ namespace AgendaAutomatizada.Forms
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_MouseDown(object sender, MouseEventArgs e)
+        {
+            tbContraseña.PasswordChar = '\0';
+        }
+        private void button2_MouseUp(object sender, MouseEventArgs e)
+        {
+            tbContraseña.PasswordChar = '*';
         }
     }
 }
