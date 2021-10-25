@@ -35,6 +35,9 @@ namespace AgendaAutomatizada.Forms
             this.label2 = new System.Windows.Forms.Label();
             this.tbContraseña = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.OpenTandas = new System.Windows.Forms.Button();
+            this.OpenDias = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -61,12 +64,27 @@ namespace AgendaAutomatizada.Forms
             this.panel3 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.MantenimientoDias = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.btnBackMantenimientoDias = new System.Windows.Forms.Button();
+            this.rdbtnInactivoDias = new System.Windows.Forms.RadioButton();
+            this.rdbtnActivoDias = new System.Windows.Forms.RadioButton();
+            this.BtnEditDias = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.tbDescripcionEditarDias = new System.Windows.Forms.TextBox();
+            this.BtnGuardarDias = new System.Windows.Forms.Button();
+            this.dtgvDias = new System.Windows.Forms.DataGridView();
+            this.label8 = new System.Windows.Forms.Label();
+            this.tbDescripcionGuardarDias = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.MantenimientoDias.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDias)).BeginInit();
             this.SuspendLayout();
             // 
             // tbUser
@@ -128,6 +146,8 @@ namespace AgendaAutomatizada.Forms
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel1.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.hand_painted_watercolor_background_with_sky_clouds_shape_24972_1095;
+            this.panel1.Controls.Add(this.OpenTandas);
+            this.panel1.Controls.Add(this.OpenDias);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.button5);
@@ -145,6 +165,36 @@ namespace AgendaAutomatizada.Forms
             this.panel1.Size = new System.Drawing.Size(200, 463);
             this.panel1.TabIndex = 5;
             this.panel1.Visible = false;
+            // 
+            // OpenTandas
+            // 
+            this.OpenTandas.Location = new System.Drawing.Point(97, 58);
+            this.OpenTandas.Name = "OpenTandas";
+            this.OpenTandas.Size = new System.Drawing.Size(103, 39);
+            this.OpenTandas.TabIndex = 32;
+            this.OpenTandas.Text = "Mantenimiento Tandas";
+            this.OpenTandas.UseVisualStyleBackColor = true;
+            // 
+            // OpenDias
+            // 
+            this.OpenDias.Location = new System.Drawing.Point(3, 58);
+            this.OpenDias.Name = "OpenDias";
+            this.OpenDias.Size = new System.Drawing.Size(103, 39);
+            this.OpenDias.TabIndex = 31;
+            this.OpenDias.Text = "Mantenimiento Dias";
+            this.OpenDias.UseVisualStyleBackColor = true;
+            this.OpenDias.Click += new System.EventHandler(this.OpenDias_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(12, 204);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(52, 13);
+            this.label7.TabIndex = 30;
+            this.label7.Text = "Jornada";
             // 
             // groupBox1
             // 
@@ -450,22 +500,153 @@ namespace AgendaAutomatizada.Forms
             // 
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Controls.Add(this.menuStrip1);
             this.panel4.Location = new System.Drawing.Point(203, 0);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(483, 463);
             this.panel4.TabIndex = 7;
             this.panel4.Visible = false;
             // 
-            // label7
+            // menuStrip1
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.Color.Transparent;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(12, 204);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 13);
-            this.label7.TabIndex = 30;
-            this.label7.Text = "Jornada";
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(483, 24);
+            this.menuStrip1.TabIndex = 8;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(234, 0);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(8, 8);
+            this.flowLayoutPanel1.TabIndex = 9;
+            // 
+            // MantenimientoDias
+            // 
+            this.MantenimientoDias.Controls.Add(this.label10);
+            this.MantenimientoDias.Controls.Add(this.btnBackMantenimientoDias);
+            this.MantenimientoDias.Controls.Add(this.rdbtnInactivoDias);
+            this.MantenimientoDias.Controls.Add(this.rdbtnActivoDias);
+            this.MantenimientoDias.Controls.Add(this.BtnEditDias);
+            this.MantenimientoDias.Controls.Add(this.label9);
+            this.MantenimientoDias.Controls.Add(this.tbDescripcionEditarDias);
+            this.MantenimientoDias.Controls.Add(this.BtnGuardarDias);
+            this.MantenimientoDias.Controls.Add(this.dtgvDias);
+            this.MantenimientoDias.Controls.Add(this.label8);
+            this.MantenimientoDias.Controls.Add(this.tbDescripcionGuardarDias);
+            this.MantenimientoDias.Location = new System.Drawing.Point(0, 0);
+            this.MantenimientoDias.Name = "MantenimientoDias";
+            this.MantenimientoDias.Size = new System.Drawing.Size(681, 463);
+            this.MantenimientoDias.TabIndex = 8;
+            this.MantenimientoDias.Visible = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(376, 80);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(45, 15);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Estado:";
+            // 
+            // btnBackMantenimientoDias
+            // 
+            this.btnBackMantenimientoDias.Location = new System.Drawing.Point(14, 12);
+            this.btnBackMantenimientoDias.Name = "btnBackMantenimientoDias";
+            this.btnBackMantenimientoDias.Size = new System.Drawing.Size(75, 23);
+            this.btnBackMantenimientoDias.TabIndex = 12;
+            this.btnBackMantenimientoDias.Text = "Back";
+            this.btnBackMantenimientoDias.UseVisualStyleBackColor = true;
+            this.btnBackMantenimientoDias.Click += new System.EventHandler(this.btnBackMantenimientoDias_Click);
+            // 
+            // rdbtnInactivoDias
+            // 
+            this.rdbtnInactivoDias.AutoSize = true;
+            this.rdbtnInactivoDias.Location = new System.Drawing.Point(519, 78);
+            this.rdbtnInactivoDias.Name = "rdbtnInactivoDias";
+            this.rdbtnInactivoDias.Size = new System.Drawing.Size(67, 19);
+            this.rdbtnInactivoDias.TabIndex = 10;
+            this.rdbtnInactivoDias.TabStop = true;
+            this.rdbtnInactivoDias.Text = "Inactivo";
+            this.rdbtnInactivoDias.UseVisualStyleBackColor = true;
+            // 
+            // rdbtnActivoDias
+            // 
+            this.rdbtnActivoDias.AutoSize = true;
+            this.rdbtnActivoDias.Location = new System.Drawing.Point(451, 78);
+            this.rdbtnActivoDias.Name = "rdbtnActivoDias";
+            this.rdbtnActivoDias.Size = new System.Drawing.Size(59, 19);
+            this.rdbtnActivoDias.TabIndex = 9;
+            this.rdbtnActivoDias.TabStop = true;
+            this.rdbtnActivoDias.Text = "Activo";
+            this.rdbtnActivoDias.UseVisualStyleBackColor = true;
+            // 
+            // BtnEditDias
+            // 
+            this.BtnEditDias.Location = new System.Drawing.Point(519, 126);
+            this.BtnEditDias.Name = "BtnEditDias";
+            this.BtnEditDias.Size = new System.Drawing.Size(75, 23);
+            this.BtnEditDias.TabIndex = 8;
+            this.BtnEditDias.Text = "Guardar";
+            this.BtnEditDias.UseVisualStyleBackColor = true;
+            this.BtnEditDias.Click += new System.EventHandler(this.BtnEditDias_Click);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(376, 51);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(72, 15);
+            this.label9.TabIndex = 7;
+            this.label9.Text = "Descripción:";
+            // 
+            // tbDescripcionEditarDias
+            // 
+            this.tbDescripcionEditarDias.Location = new System.Drawing.Point(451, 48);
+            this.tbDescripcionEditarDias.Name = "tbDescripcionEditarDias";
+            this.tbDescripcionEditarDias.Size = new System.Drawing.Size(177, 23);
+            this.tbDescripcionEditarDias.TabIndex = 6;
+            // 
+            // BtnGuardarDias
+            // 
+            this.BtnGuardarDias.Location = new System.Drawing.Point(218, 103);
+            this.BtnGuardarDias.Name = "BtnGuardarDias";
+            this.BtnGuardarDias.Size = new System.Drawing.Size(75, 23);
+            this.BtnGuardarDias.TabIndex = 5;
+            this.BtnGuardarDias.Text = "Guardar";
+            this.BtnGuardarDias.UseVisualStyleBackColor = true;
+            this.BtnGuardarDias.Click += new System.EventHandler(this.BtnGuardarDias_Click);
+            // 
+            // dtgvDias
+            // 
+            this.dtgvDias.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            this.dtgvDias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvDias.Location = new System.Drawing.Point(12, 179);
+            this.dtgvDias.MultiSelect = false;
+            this.dtgvDias.Name = "dtgvDias";
+            this.dtgvDias.ReadOnly = true;
+            this.dtgvDias.RowTemplate.Height = 25;
+            this.dtgvDias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dtgvDias.Size = new System.Drawing.Size(660, 270);
+            this.dtgvDias.TabIndex = 4;
+            this.dtgvDias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDias_CellClick);
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(29, 54);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(72, 15);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Descripción:";
+            // 
+            // tbDescripcionGuardarDias
+            // 
+            this.tbDescripcionGuardarDias.Location = new System.Drawing.Point(104, 51);
+            this.tbDescripcionGuardarDias.Name = "tbDescripcionGuardarDias";
+            this.tbDescripcionGuardarDias.Size = new System.Drawing.Size(177, 23);
+            this.tbDescripcionGuardarDias.TabIndex = 0;
             // 
             // LoginForm
             // 
@@ -475,10 +656,13 @@ namespace AgendaAutomatizada.Forms
             this.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.hand_painted_watercolor_background_with_sky_clouds_shape_24972_1095;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(684, 461);
+            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.MantenimientoDias);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "LoginForm";
             this.Text = "Agenda";
             this.Load += new System.EventHandler(this.LoginForm_Load);
@@ -491,6 +675,9 @@ namespace AgendaAutomatizada.Forms
             this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.MantenimientoDias.ResumeLayout(false);
+            this.MantenimientoDias.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvDias)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -530,6 +717,22 @@ namespace AgendaAutomatizada.Forms
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel MantenimientoDias;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox tbDescripcionGuardarDias;
+        private System.Windows.Forms.DataGridView dtgvDias;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.RadioButton rdbtnInactivoDias;
+        private System.Windows.Forms.RadioButton rdbtnActivoDias;
+        private System.Windows.Forms.Button BtnEditDias;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox tbDescripcionEditarDias;
+        private System.Windows.Forms.Button BtnGuardarDias;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.Button btnBackMantenimientoDias;
+        private System.Windows.Forms.Button OpenTandas;
+        private System.Windows.Forms.Button OpenDias;
     }
 }
 
