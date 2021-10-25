@@ -67,23 +67,29 @@ namespace AgendaAutomatizada.Forms
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.MantenimientoDias = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
             this.btnBackMantenimientoDias = new System.Windows.Forms.Button();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.BtnEditDias = new System.Windows.Forms.Button();
+            this.tbDescripcionEditarDias = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.rdbtnInactivoDias = new System.Windows.Forms.RadioButton();
             this.rdbtnActivoDias = new System.Windows.Forms.RadioButton();
-            this.BtnEditDias = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.tbDescripcionEditarDias = new System.Windows.Forms.TextBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tbDescripcionGuardarDias = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.BtnGuardarDias = new System.Windows.Forms.Button();
             this.dtgvDias = new System.Windows.Forms.DataGridView();
-            this.label8 = new System.Windows.Forms.Label();
-            this.tbDescripcionGuardarDias = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.MantenimientoDias.SuspendLayout();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -420,7 +426,7 @@ namespace AgendaAutomatizada.Forms
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(10, 95);
+            this.label4.Location = new System.Drawing.Point(10, 109);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(50, 13);
             this.label4.TabIndex = 9;
@@ -428,7 +434,7 @@ namespace AgendaAutomatizada.Forms
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(10, 111);
+            this.textBox1.Location = new System.Drawing.Point(10, 125);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(169, 23);
             this.textBox1.TabIndex = 8;
@@ -524,129 +530,190 @@ namespace AgendaAutomatizada.Forms
             // 
             // MantenimientoDias
             // 
-            this.MantenimientoDias.Controls.Add(this.label10);
+            this.MantenimientoDias.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.hand_painted_watercolor_background_with_sky_clouds_shape_24972_1095;
+            this.MantenimientoDias.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.MantenimientoDias.Controls.Add(this.btnBackMantenimientoDias);
-            this.MantenimientoDias.Controls.Add(this.rdbtnInactivoDias);
-            this.MantenimientoDias.Controls.Add(this.rdbtnActivoDias);
-            this.MantenimientoDias.Controls.Add(this.BtnEditDias);
-            this.MantenimientoDias.Controls.Add(this.label9);
-            this.MantenimientoDias.Controls.Add(this.tbDescripcionEditarDias);
-            this.MantenimientoDias.Controls.Add(this.BtnGuardarDias);
+            this.MantenimientoDias.Controls.Add(this.groupBox3);
+            this.MantenimientoDias.Controls.Add(this.groupBox2);
             this.MantenimientoDias.Controls.Add(this.dtgvDias);
-            this.MantenimientoDias.Controls.Add(this.label8);
-            this.MantenimientoDias.Controls.Add(this.tbDescripcionGuardarDias);
-            this.MantenimientoDias.Location = new System.Drawing.Point(0, 0);
+            this.MantenimientoDias.Location = new System.Drawing.Point(3, 3);
             this.MantenimientoDias.Name = "MantenimientoDias";
             this.MantenimientoDias.Size = new System.Drawing.Size(681, 463);
             this.MantenimientoDias.TabIndex = 8;
             this.MantenimientoDias.Visible = false;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(376, 80);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(45, 15);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Estado:";
-            // 
             // btnBackMantenimientoDias
             // 
-            this.btnBackMantenimientoDias.Location = new System.Drawing.Point(14, 12);
+            this.btnBackMantenimientoDias.BackColor = System.Drawing.Color.Transparent;
+            this.btnBackMantenimientoDias.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.back;
+            this.btnBackMantenimientoDias.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnBackMantenimientoDias.Location = new System.Drawing.Point(-2, -6);
             this.btnBackMantenimientoDias.Name = "btnBackMantenimientoDias";
-            this.btnBackMantenimientoDias.Size = new System.Drawing.Size(75, 23);
+            this.btnBackMantenimientoDias.Size = new System.Drawing.Size(33, 33);
             this.btnBackMantenimientoDias.TabIndex = 12;
-            this.btnBackMantenimientoDias.Text = "Back";
-            this.btnBackMantenimientoDias.UseVisualStyleBackColor = true;
+            this.btnBackMantenimientoDias.UseVisualStyleBackColor = false;
             this.btnBackMantenimientoDias.Click += new System.EventHandler(this.btnBackMantenimientoDias_Click);
             // 
-            // rdbtnInactivoDias
+            // groupBox3
             // 
-            this.rdbtnInactivoDias.AutoSize = true;
-            this.rdbtnInactivoDias.Location = new System.Drawing.Point(519, 78);
-            this.rdbtnInactivoDias.Name = "rdbtnInactivoDias";
-            this.rdbtnInactivoDias.Size = new System.Drawing.Size(67, 19);
-            this.rdbtnInactivoDias.TabIndex = 10;
-            this.rdbtnInactivoDias.TabStop = true;
-            this.rdbtnInactivoDias.Text = "Inactivo";
-            this.rdbtnInactivoDias.UseVisualStyleBackColor = true;
+            this.groupBox3.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox3.Controls.Add(this.label12);
+            this.groupBox3.Controls.Add(this.BtnEditDias);
+            this.groupBox3.Controls.Add(this.tbDescripcionEditarDias);
+            this.groupBox3.Controls.Add(this.label10);
+            this.groupBox3.Controls.Add(this.label9);
+            this.groupBox3.Controls.Add(this.rdbtnInactivoDias);
+            this.groupBox3.Controls.Add(this.rdbtnActivoDias);
+            this.groupBox3.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox3.Location = new System.Drawing.Point(338, 0);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(334, 142);
+            this.groupBox3.TabIndex = 7;
+            this.groupBox3.TabStop = false;
             // 
-            // rdbtnActivoDias
+            // label12
             // 
-            this.rdbtnActivoDias.AutoSize = true;
-            this.rdbtnActivoDias.Location = new System.Drawing.Point(451, 78);
-            this.rdbtnActivoDias.Name = "rdbtnActivoDias";
-            this.rdbtnActivoDias.Size = new System.Drawing.Size(59, 19);
-            this.rdbtnActivoDias.TabIndex = 9;
-            this.rdbtnActivoDias.TabStop = true;
-            this.rdbtnActivoDias.Text = "Activo";
-            this.rdbtnActivoDias.UseVisualStyleBackColor = true;
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.Transparent;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label12.Location = new System.Drawing.Point(131, 13);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(69, 17);
+            this.label12.TabIndex = 7;
+            this.label12.Text = "Editar Día";
             // 
             // BtnEditDias
             // 
-            this.BtnEditDias.Location = new System.Drawing.Point(519, 126);
+            this.BtnEditDias.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnEditDias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEditDias.ForeColor = System.Drawing.Color.White;
+            this.BtnEditDias.Location = new System.Drawing.Point(128, 108);
             this.BtnEditDias.Name = "BtnEditDias";
             this.BtnEditDias.Size = new System.Drawing.Size(75, 23);
             this.BtnEditDias.TabIndex = 8;
-            this.BtnEditDias.Text = "Guardar";
-            this.BtnEditDias.UseVisualStyleBackColor = true;
+            this.BtnEditDias.Text = "Editar";
+            this.BtnEditDias.UseVisualStyleBackColor = false;
             this.BtnEditDias.Click += new System.EventHandler(this.BtnEditDias_Click);
+            // 
+            // tbDescripcionEditarDias
+            // 
+            this.tbDescripcionEditarDias.Location = new System.Drawing.Point(98, 43);
+            this.tbDescripcionEditarDias.Name = "tbDescripcionEditarDias";
+            this.tbDescripcionEditarDias.Size = new System.Drawing.Size(211, 23);
+            this.tbDescripcionEditarDias.TabIndex = 6;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.Transparent;
+            this.label10.Location = new System.Drawing.Point(23, 75);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(46, 15);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Estado:";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(376, 51);
+            this.label9.BackColor = System.Drawing.Color.Transparent;
+            this.label9.Location = new System.Drawing.Point(23, 46);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(72, 15);
+            this.label9.Size = new System.Drawing.Size(75, 15);
             this.label9.TabIndex = 7;
             this.label9.Text = "Descripción:";
             // 
-            // tbDescripcionEditarDias
+            // rdbtnInactivoDias
             // 
-            this.tbDescripcionEditarDias.Location = new System.Drawing.Point(451, 48);
-            this.tbDescripcionEditarDias.Name = "tbDescripcionEditarDias";
-            this.tbDescripcionEditarDias.Size = new System.Drawing.Size(177, 23);
-            this.tbDescripcionEditarDias.TabIndex = 6;
+            this.rdbtnInactivoDias.AutoSize = true;
+            this.rdbtnInactivoDias.BackColor = System.Drawing.Color.Transparent;
+            this.rdbtnInactivoDias.Location = new System.Drawing.Point(166, 73);
+            this.rdbtnInactivoDias.Name = "rdbtnInactivoDias";
+            this.rdbtnInactivoDias.Size = new System.Drawing.Size(70, 19);
+            this.rdbtnInactivoDias.TabIndex = 10;
+            this.rdbtnInactivoDias.TabStop = true;
+            this.rdbtnInactivoDias.Text = "Inactivo";
+            this.rdbtnInactivoDias.UseVisualStyleBackColor = false;
+            // 
+            // rdbtnActivoDias
+            // 
+            this.rdbtnActivoDias.AutoSize = true;
+            this.rdbtnActivoDias.BackColor = System.Drawing.Color.Transparent;
+            this.rdbtnActivoDias.Location = new System.Drawing.Point(98, 73);
+            this.rdbtnActivoDias.Name = "rdbtnActivoDias";
+            this.rdbtnActivoDias.Size = new System.Drawing.Size(61, 19);
+            this.rdbtnActivoDias.TabIndex = 9;
+            this.rdbtnActivoDias.TabStop = true;
+            this.rdbtnActivoDias.Text = "Activo";
+            this.rdbtnActivoDias.UseVisualStyleBackColor = false;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.groupBox2.Controls.Add(this.label11);
+            this.groupBox2.Controls.Add(this.tbDescripcionGuardarDias);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Controls.Add(this.BtnGuardarDias);
+            this.groupBox2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.groupBox2.Location = new System.Drawing.Point(11, 0);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(321, 142);
+            this.groupBox2.TabIndex = 13;
+            this.groupBox2.TabStop = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.Transparent;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.label11.Location = new System.Drawing.Point(106, 13);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(82, 17);
+            this.label11.TabIndex = 6;
+            this.label11.Text = "Agregar Día";
+            // 
+            // tbDescripcionGuardarDias
+            // 
+            this.tbDescripcionGuardarDias.Location = new System.Drawing.Point(21, 61);
+            this.tbDescripcionGuardarDias.Name = "tbDescripcionGuardarDias";
+            this.tbDescripcionGuardarDias.Size = new System.Drawing.Size(279, 23);
+            this.tbDescripcionGuardarDias.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.Transparent;
+            this.label8.Location = new System.Drawing.Point(21, 43);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(75, 15);
+            this.label8.TabIndex = 1;
+            this.label8.Text = "Descripción:";
             // 
             // BtnGuardarDias
             // 
-            this.BtnGuardarDias.Location = new System.Drawing.Point(218, 103);
+            this.BtnGuardarDias.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BtnGuardarDias.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGuardarDias.ForeColor = System.Drawing.Color.White;
+            this.BtnGuardarDias.Location = new System.Drawing.Point(113, 108);
             this.BtnGuardarDias.Name = "BtnGuardarDias";
             this.BtnGuardarDias.Size = new System.Drawing.Size(75, 23);
             this.BtnGuardarDias.TabIndex = 5;
             this.BtnGuardarDias.Text = "Guardar";
-            this.BtnGuardarDias.UseVisualStyleBackColor = true;
+            this.BtnGuardarDias.UseVisualStyleBackColor = false;
             this.BtnGuardarDias.Click += new System.EventHandler(this.BtnGuardarDias_Click);
             // 
             // dtgvDias
             // 
             this.dtgvDias.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.dtgvDias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvDias.Location = new System.Drawing.Point(12, 179);
+            this.dtgvDias.Location = new System.Drawing.Point(12, 148);
             this.dtgvDias.MultiSelect = false;
             this.dtgvDias.Name = "dtgvDias";
             this.dtgvDias.ReadOnly = true;
             this.dtgvDias.RowTemplate.Height = 25;
             this.dtgvDias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dtgvDias.Size = new System.Drawing.Size(660, 270);
+            this.dtgvDias.Size = new System.Drawing.Size(660, 301);
             this.dtgvDias.TabIndex = 4;
             this.dtgvDias.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDias_CellClick);
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(29, 54);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(72, 15);
-            this.label8.TabIndex = 1;
-            this.label8.Text = "Descripción:";
-            // 
-            // tbDescripcionGuardarDias
-            // 
-            this.tbDescripcionGuardarDias.Location = new System.Drawing.Point(104, 51);
-            this.tbDescripcionGuardarDias.Name = "tbDescripcionGuardarDias";
-            this.tbDescripcionGuardarDias.Size = new System.Drawing.Size(177, 23);
-            this.tbDescripcionGuardarDias.TabIndex = 0;
             // 
             // LoginForm
             // 
@@ -656,11 +723,11 @@ namespace AgendaAutomatizada.Forms
             this.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.hand_painted_watercolor_background_with_sky_clouds_shape_24972_1095;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(684, 461);
+            this.Controls.Add(this.MantenimientoDias);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.MantenimientoDias);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "LoginForm";
@@ -676,7 +743,10 @@ namespace AgendaAutomatizada.Forms
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.MantenimientoDias.ResumeLayout(false);
-            this.MantenimientoDias.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDias)).EndInit();
             this.ResumeLayout(false);
 
@@ -733,6 +803,10 @@ namespace AgendaAutomatizada.Forms
         private System.Windows.Forms.Button btnBackMantenimientoDias;
         private System.Windows.Forms.Button OpenTandas;
         private System.Windows.Forms.Button OpenDias;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label11;
     }
 }
 
