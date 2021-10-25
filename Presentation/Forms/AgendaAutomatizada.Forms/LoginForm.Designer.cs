@@ -39,15 +39,7 @@ namespace AgendaAutomatizada.Forms
             this.OpenDias = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox5 = new System.Windows.Forms.CheckBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
-            this.checkBox4 = new System.Windows.Forms.CheckBox();
-            this.checkBox9 = new System.Windows.Forms.CheckBox();
-            this.checkBox6 = new System.Windows.Forms.CheckBox();
-            this.checkBox8 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -98,6 +90,7 @@ namespace AgendaAutomatizada.Forms
             this.label17 = new System.Windows.Forms.Label();
             this.btnGuardarTanda = new System.Windows.Forms.Button();
             this.dtgvTanda = new System.Windows.Forms.DataGridView();
+            this.cbDias = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -225,128 +218,25 @@ namespace AgendaAutomatizada.Forms
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.checkBox5);
+            this.groupBox1.Controls.Add(this.cbDias);
             this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.checkBox2);
-            this.groupBox1.Controls.Add(this.checkBox3);
-            this.groupBox1.Controls.Add(this.checkBox4);
-            this.groupBox1.Controls.Add(this.checkBox9);
-            this.groupBox1.Controls.Add(this.checkBox6);
-            this.groupBox1.Controls.Add(this.checkBox8);
-            this.groupBox1.Controls.Add(this.checkBox7);
             this.groupBox1.Location = new System.Drawing.Point(0, 238);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(200, 158);
             this.groupBox1.TabIndex = 29;
             this.groupBox1.TabStop = false;
             // 
-            // checkBox5
-            // 
-            this.checkBox5.AutoSize = true;
-            this.checkBox5.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox5.Location = new System.Drawing.Point(92, 43);
-            this.checkBox5.Name = "checkBox5";
-            this.checkBox5.Size = new System.Drawing.Size(64, 17);
-            this.checkBox5.TabIndex = 19;
-            this.checkBox5.Text = "Martes";
-            this.checkBox5.UseVisualStyleBackColor = false;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.Transparent;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label6.Location = new System.Drawing.Point(74, 8);
+            this.label6.Location = new System.Drawing.Point(10, 18);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(32, 13);
             this.label6.TabIndex = 15;
             this.label6.Text = "Dias";
             this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox2.Location = new System.Drawing.Point(2, 42);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(60, 17);
-            this.checkBox2.TabIndex = 16;
-            this.checkBox2.Text = "Lunes";
-            this.checkBox2.UseVisualStyleBackColor = false;
-            // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox3.Location = new System.Drawing.Point(2, 68);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(80, 17);
-            this.checkBox3.TabIndex = 17;
-            this.checkBox3.Text = "Miercoles";
-            this.checkBox3.UseVisualStyleBackColor = false;
-            // 
-            // checkBox4
-            // 
-            this.checkBox4.AutoSize = true;
-            this.checkBox4.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox4.Location = new System.Drawing.Point(2, 94);
-            this.checkBox4.Name = "checkBox4";
-            this.checkBox4.Size = new System.Drawing.Size(68, 17);
-            this.checkBox4.TabIndex = 18;
-            this.checkBox4.Text = "Viernes";
-            this.checkBox4.UseVisualStyleBackColor = false;
-            // 
-            // checkBox9
-            // 
-            this.checkBox9.AutoSize = true;
-            this.checkBox9.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox9.Location = new System.Drawing.Point(92, 119);
-            this.checkBox9.Name = "checkBox9";
-            this.checkBox9.Size = new System.Drawing.Size(108, 17);
-            this.checkBox9.TabIndex = 23;
-            this.checkBox9.Text = "Todos los dias";
-            this.checkBox9.UseVisualStyleBackColor = false;
-            // 
-            // checkBox6
-            // 
-            this.checkBox6.AutoSize = true;
-            this.checkBox6.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox6.Location = new System.Drawing.Point(92, 68);
-            this.checkBox6.Name = "checkBox6";
-            this.checkBox6.Size = new System.Drawing.Size(66, 17);
-            this.checkBox6.TabIndex = 20;
-            this.checkBox6.Text = "Jueves";
-            this.checkBox6.UseVisualStyleBackColor = false;
-            // 
-            // checkBox8
-            // 
-            this.checkBox8.AutoSize = true;
-            this.checkBox8.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox8.Location = new System.Drawing.Point(2, 120);
-            this.checkBox8.Name = "checkBox8";
-            this.checkBox8.Size = new System.Drawing.Size(75, 17);
-            this.checkBox8.TabIndex = 22;
-            this.checkBox8.Text = "Domingo";
-            this.checkBox8.UseVisualStyleBackColor = false;
-            // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.BackColor = System.Drawing.Color.Transparent;
-            this.checkBox7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBox7.Location = new System.Drawing.Point(92, 93);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(69, 17);
-            this.checkBox7.TabIndex = 21;
-            this.checkBox7.Text = "Sábado";
-            this.checkBox7.UseVisualStyleBackColor = false;
             // 
             // button5
             // 
@@ -913,6 +803,19 @@ namespace AgendaAutomatizada.Forms
             this.dtgvTanda.TabIndex = 4;
             this.dtgvTanda.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvTanda_CellClick);
             // 
+            // cbDias
+            // 
+            this.cbDias.FormattingEnabled = true;
+            this.cbDias.Items.AddRange(new object[] {
+            "Matutina",
+            "Vespertina",
+            "Nocturna"});
+            this.cbDias.Location = new System.Drawing.Point(11, 34);
+            this.cbDias.Name = "cbDias";
+            this.cbDias.Size = new System.Drawing.Size(121, 23);
+            this.cbDias.TabIndex = 33;
+            this.cbDias.Text = "Jornada";
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -920,12 +823,12 @@ namespace AgendaAutomatizada.Forms
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(684, 461);
-            this.Controls.Add(this.MantenimientoTandas);
-            this.Controls.Add(this.MantenimientoDias);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.MantenimientoTandas);
+            this.Controls.Add(this.MantenimientoDias);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "LoginForm";
@@ -967,14 +870,6 @@ namespace AgendaAutomatizada.Forms
         private System.Windows.Forms.ComboBox cbTanda;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.CheckBox checkBox9;
-        private System.Windows.Forms.CheckBox checkBox8;
-        private System.Windows.Forms.CheckBox checkBox7;
-        private System.Windows.Forms.CheckBox checkBox6;
-        private System.Windows.Forms.CheckBox checkBox5;
-        private System.Windows.Forms.CheckBox checkBox4;
-        private System.Windows.Forms.CheckBox checkBox3;
-        private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.CheckBox checkBox1;
@@ -1027,6 +922,7 @@ namespace AgendaAutomatizada.Forms
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Button btnGuardarTanda;
         private System.Windows.Forms.DataGridView dtgvTanda;
+        private System.Windows.Forms.ComboBox cbDias;
     }
 }
 
