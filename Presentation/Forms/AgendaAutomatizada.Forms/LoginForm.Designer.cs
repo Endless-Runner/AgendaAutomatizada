@@ -207,7 +207,6 @@ namespace AgendaAutomatizada.Forms
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.cbDias);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Location = new System.Drawing.Point(0, 238);
             this.groupBox1.Name = "groupBox1";
@@ -700,12 +699,12 @@ namespace AgendaAutomatizada.Forms
             this.BackgroundImage = global::AgendaAutomatizada.Forms.Properties.Resources.hand_painted_watercolor_background_with_sky_clouds_shape_24972_1095;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(684, 461);
+            this.Controls.Add(this.MantenimientoTandas);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.MantenimientoDias);
-            this.Controls.Add(this.MantenimientoTandas);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "LoginForm";
